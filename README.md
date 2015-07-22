@@ -13,8 +13,15 @@
 put lotto.csv into HDFS:
 hdfs dfs -put /local_path_to/lotto.csv /input
 
+from directory "mapreduce_example" run "mvn clean package",
+next "mvn exec:java"
+
 
 ### RUN Pig Example ###
 
 put some pom.xml file('s) into HDFS
+example files in pig_example/src/main/resources/example_poms.tar.gz
+
+from directory pig_example run "mvn clean package",
+next "sh ./target/appassembler/bin/pigApp"
 
