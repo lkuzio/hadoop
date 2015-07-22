@@ -8,3 +8,13 @@
 * Setup Hive (ver. 1.1.1)
 
 
+### RUN Map Reduce example ###
+
+put lotto.csv into HDFS:
+hdfs dfs -put /local_path_to/lotto.csv /input
+
+
+### RUN Pig Example ###
+
+put some pom.xml file('s) into HDFS
+
